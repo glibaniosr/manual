@@ -55,8 +55,23 @@ and start calculations. See the [eChem](https://kthpanor.github.io/echem) book f
 
 ## Installing from source
 
-Soon!
-
-```python
+To install from source, the easiest is to use the yml file to install all the dependencies through conda.
 
 ```
+git clone https://gitlab.com/MGDelcey/multipsi.git
+cd multipsi
+conda env create -f mtp_env.yml
+conda activate mtpenv
+```
+
+This command will create an environment called mtpenv with the required dependencies.
+
+```
+python -m pip install --no-build-isolation -v .
+```
+
+Since MultiPsi is tightly integrated to VeloxChem, when installing MultiPsi from source you may want to first also [install VeloxChem from source](https://veloxchem.org/docs/installation.html).
+
+
+
+
